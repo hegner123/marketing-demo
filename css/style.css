@@ -18,10 +18,10 @@
   --peach: #e4c5af;
   --dark: var(--slate);
   --light: var(--peach);
-  /* --primary:var(--teal-blue); */
-  --primary: var(--dark-accent);
-  /* --dark-accent:var(--dark-green); */
+  --primary: var(--dark-green);
   --dark-accent: var(--teal-blue);
+  --accent: var(--light-green);
+  --accent-forest: var(--forest-green);
 }
 
 body {
@@ -80,13 +80,18 @@ nav div {
   width: 100%;
 }
 
-nav .logo {
+nav .nav-1 {
   height: 100%;
   display: flex;
   align-items: center;
+  padding-left: 30px;
 }
 
-nav .logo .logo_img {
+nav .nav-2 {
+  padding-right: 30px;
+}
+
+nav .nav-1 .logo_img {
   width: 25%;
 }
 
@@ -135,21 +140,38 @@ section.page-title h2 {
 
 section.product-grid {
   display: grid;
-  grid: 100px 100px / repeat(5, 1fr);
-  gap: 10px;
+  grid: auto / repeat(5, auto);
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+section.product-grid div:nth-child(4) {
+  grid-column: 4 / -1;
+  padding: 0 40px;
 }
 
 section.product-grid div {
+  background: var(--light-green);
   display: flex;
+  flex-direction: column;
   height: 100%;
   align-items: center;
   justify-content: center;
-  background: var(--light-green);
+}
+
+section.product-grid div div {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-img {
+  padding: 10px;
+  width: 100%;
 }
 
 section.text-img {
   display: grid;
-  grid: 400px / repeat(2, 1fr);
+  grid: 600px / repeat(2, 1fr);
   align-items: center;
 }
 
@@ -162,6 +184,7 @@ section.text-img div .text-img-text {
 }
 
 section.card-section {
+  background: var(--slate);
   display: grid;
   grid: 400px / repeat(3, 1fr);
   align-items: center;
@@ -175,6 +198,8 @@ section.card-section div {
 .card {
   flex-direction: column;
   border: solid 1px var(--dark-accent);
-  width: 55%;
-  padding: 25px;
+  background: var(--dark-accent);
+  width: 80%;
+  padding: 30px;
+  border-radius: 4px;
 }
