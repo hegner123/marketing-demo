@@ -174,7 +174,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +185,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -348,13 +350,23 @@ template {
   display: none;
 }
 
-
-ul{
+ul {
   margin-block-end: 0;
   margin-block-start: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+ul,
+ol {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
