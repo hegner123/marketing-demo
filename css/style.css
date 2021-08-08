@@ -183,14 +183,14 @@ section.text-img div .text-img-text {
   border-radius: 4px;
 }
 
-section.card-section {
+footer.card-section {
   background: var(--slate);
   display: grid;
   grid: 400px / repeat(3, 1fr);
   align-items: center;
 }
 
-section.card-section div {
+footer.card-section div {
   display: flex;
   justify-content: center;
 }
@@ -202,4 +202,32 @@ section.card-section div {
   width: 80%;
   padding: 30px;
   border-radius: 4px;
+}
+
+#product-1,
+#product-2,
+#product-3 {
+  position: relative;
+}
+
+#overlay-1,
+#overlay-2,
+#overlay-3 {
+  background-color: #333333aa;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition-duration: 300ms;
+}
+
+#overlay-1 h4,
+#overlay-2 h4,
+#overlay-3 h4 {
+  color: #fff;
 }
