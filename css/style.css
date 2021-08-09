@@ -15,17 +15,14 @@
 :root {
   --slate: #262626;
   --white: #fcfcfc;
-  --dark-green: #074f57;
-  --teal-blue: #077187;
-  --forest-green: #74a57f;
-  --light-green: #9ece9a;
-  --peach: #e4c5af;
+  --blue: #20967f;
+  --salmon: #bf6274;
   --dark: var(--slate);
-  --light: var(--peach);
-  --primary: var(--dark-green);
-  --dark-accent: var(--teal-blue);
-  --accent: var(--light-green);
-  --accent-forest: var(--forest-green);
+  --light: var(--white);
+  --primary: var(--blue);
+  --dark-accent: var(--slate);
+  --accent: var(--salmon);
+  --accent-forest: var(--slate);
   --nav-height: 105px;
 }
 
@@ -61,7 +58,7 @@ h3 {
 
 h4 {
   font-size: 1.25rem;
-  color: var(--dark-accent);
+  color: var(--dark);
 }
 
 p {
@@ -164,7 +161,7 @@ section.product-grid div:nth-child(4) {
 }
 
 section.product-grid div {
-  background: var(--light-green);
+  background: var(--primary);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -189,7 +186,7 @@ section.text-img {
 }
 
 section.text-img div .text-img-text {
-  background: var(--light-green);
+  background: var(--accent);
   padding: 40px 60px 60px 40px;
   width: 55%;
   margin-left: 20%;
@@ -252,6 +249,10 @@ footer.card-section div {
   transition: 200ms;
 }
 
+.btn.btn-large{
+  padding:2rem;
+}
+
 .btn.btn-navigation {
   background: var(--teal-blue);
   color: var(--white);
@@ -272,13 +273,62 @@ section.tours-section {
 }
 
 section.tours-section div {
+  position: relative;
   justify-content: center;
   border: solid 1px black;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section.tours-section div div.overlay {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #333333dd;
+  opacity: 0;
+  transition-duration: 300ms;
+}
+section.tours-section div div.overlay a {
+  font-size: 2rem;
+  color: var(--light);
+}
+section.tours-section div div.overlay:hover {
+  opacity: 1;
+}
+
+section.tours-section div.home-tours {
+  background-image: url("../img/HomeTours.jpeg");
+}
+
+section.tours-section div.business-tours {
+  background-image: url("../img/Business-Tours.jpeg");
+}
+section.tours-section div.showroom {
+  background-image: url("../img/showroom.jpeg");
 }
 
 section.call-to-action-section {
   height: 10vh;
-  background:var(--light)
+  background: var(--light);
+  display: grid;
+  grid: 1fr/ 1fr 1fr;
+}
+section.call-to-action-section .call {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+section.call-to-action-section .action {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: red;
 }
 
 section.four-square {
